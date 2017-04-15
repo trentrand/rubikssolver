@@ -42,12 +42,19 @@
 %
 % Usage -
 %   Now that your cube is in the correct orientation, input your cube map to generate a solution.
-%   | :- solve(X, cube(r,w,o,r,w,b,w,w,b, r,r,r,o,y,y,b,y,y, g,g,o,o,g,w,o,g,b, r,r,b,y,b,b,g,o,o, g,g,w,r,r,b,y,y,y, w,g,g,w,o,o,w,b,y), C), finished(C).
+%   | :- solve(X, cube(r,w,o,r,w,b,w,w,b, r,r,r,o,y,y,b,y,y, g,g,o,o,g,w,o,g,b, r,r,b,y,b,b,g,o,o, g,g,w,r,r,b,y,y,y, w,g,g,w,o,o,w,b,y), C), solved(C).
+%
+% Test case -
+%   The following is a cube map for a solved cube with the Up side rotated 90 degrees:
+%     w,w,w,w,w,w,w,w,w, y,y,y,y,y,y,y,y,y, r,r,r,g,g,g,g,g,g, o,o,o,b,b,b,b,b,b, b,b,b,r,r,r,r,r,r, o,o,o,o,o,o,g,g,g
+%
+%   To solve, it should require 3 rotations of Up side, with a solution of [up, up, up]. Currently if you trace the execution, you can see that this rule fails.
+%   | :- solve(X, cube(w,w,w,w,w,w,w,w,w, y,y,y,y,y,y,y,y,y, r,r,r,g,g,g,g,g,g, o,o,o,b,b,b,b,b,b, b,b,b,r,r,r,r,r,r, o,o,o,o,o,o,g,g,g), C), solved(C).
 %
 % %
 
 % Define the base case, where all colors are in correct position and the cube is solved
-finished(cube(W,W,W,W,W,W,W,W,W,Y,Y,Y,Y,Y,Y,Y,Y,Y,G,G,G,G,G,G,G,G,G,B,B,B,B,B,B,B,B,B,R,R,R,R,R,R,R,R,R,O,O,O,O,O,O,O,O,O)).
+solved(cube(W,W,W,W,W,W,W,W,W,Y,Y,Y,Y,Y,Y,Y,Y,Y,G,G,G,G,G,G,G,G,G,B,B,B,B,B,B,B,B,B,R,R,R,R,R,R,R,R,R,O,O,O,O,O,O,O,O,O)).
 
 % Solve the Rubik's Cube by replacing C with your cube map
 solve([], C, C), !.
