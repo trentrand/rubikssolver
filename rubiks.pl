@@ -96,7 +96,7 @@ rotateside(
         R1, R2, R3, G4, G5, G6, G7, G8, G9,     % left side
         O1, O2, O3, B4, B5, B6, B7, B8, B9,     % right side
         B1, B2, B3, R4, R5, R6, R7, R8, R9,     % front side
-        O1, O2, O3, O4, O5, G6, G7, G8, O9      % back side
+        O1, O2, O3, O4, O5, O6, G7, G8, G9      % back side
         )
 ).
 
@@ -130,7 +130,7 @@ rotateside(
     cube(
         W1, W2, W3, W4, W5, W6, G7, G8, G9,     % top side
         B1, B2, B3, Y4, Y5, Y6, Y7, Y8, Y9,     % bottom side
-        G1, G2, Y3, G4, G5,YG6, G7, G8,YG9,     % left side
+        G1, G2, Y3, G4, G5, Y6, G7, G8, Y9,     % left side
         W1, B2, B3, W4, B5, B6, W7, B8, B9,     % right side
         R1, R2, R3, R4, R5, R6, R7, R8, R9,     % front side
         O1, O2, O3, O4, O5, O6, O7, O8, O9      % back side
