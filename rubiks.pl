@@ -57,7 +57,7 @@
 solved(cube(W,W,W,W,W,W,W,W,W,Y,Y,Y,Y,Y,Y,Y,Y,Y,G,G,G,G,G,G,G,G,G,B,B,B,B,B,B,B,B,B,R,R,R,R,R,R,R,R,R,O,O,O,O,O,O,O,O,O)).
 
 % Solve the Rubik's Cube by replacing C with your cube map
-solve([], C, C), !.
+solve([], C, C).
 solve([M | T], C, E) :- solve(T, D, E), write('.'), rotateside(M, C, D).
 
 
