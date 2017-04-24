@@ -70,7 +70,7 @@
 %
 %
 % Usage -
-%   Now that your cube is in the correct orientation, input your cube map to generate a solution. Input each face in the order specfied above.
+%   Now that your cube is in the correct orientation, input your cube map to generate a solution. Input each face in the order specfied above by the 'Order of Input' representation above.
 %   For example, the following is how you can solve a solved cube with F,R,U applied:
 %   | :- solve(Solution, cube(g,w,w,g,w,w,r,r,r,b,b,o,y,y,o,y,y,o,g,g,r,g,g,r,y,y,b,o,b,b,o,b,b,g,b,b,w,w,w,r,r,y,r,r,y,o,o,w,o,o,w,y,g,g), C), solved(C).
 %

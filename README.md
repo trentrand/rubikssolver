@@ -24,7 +24,7 @@ The cube is mapped in the following structure, where variables are listed in num
 
 
 #### Visual representation of cube map
-```bash
+```
    Side labels:                Color labels:                    Order of Input:
 
             B1 B2 B3                       O1 O2 O3                         46 47 48
@@ -42,7 +42,7 @@ The cube is mapped in the following structure, where variables are listed in num
 ```
 
 #### Usage
-   Now that your cube is in the correct orientation, input your cube map to generate a solution. Input each face in the order specfied above.
+   Now that your cube is in the correct orientation, input your cube map to generate a solution. Input each face in the order specfied above by the 'Order of Input' representation above.
 
    For example, the following is how you can solve a solved cube with F,R,U applied:
    ```
