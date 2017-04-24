@@ -81,7 +81,7 @@ solved(cube(W,W,W,W,W,W,W,W,W,Y,Y,Y,Y,Y,Y,Y,Y,Y,G,G,G,G,G,G,G,G,G,B,B,B,B,B,B,B,
 
 % Solve the Rubik's Cube by replacing C with your cube map
 solve([], C, C).
-solve([M | T], C, E) :- solve(T, D, E), rotateside(M, C, D).
+solve([NextRotation | PrevRotation], C, CurrentState) :- solve(PrevRotation, D, CurrentState), rotateside(NextRotation, C, D).
 
 
 % Side Rotation translation maps-
