@@ -71,8 +71,8 @@
 %
 % Usage -
 %   Now that your cube is in the correct orientation, input your cube map to generate a solution. Input each face in the order specfied above.
-%   For example, the following is how you can solve a solved cube with F,R,U,R',U',F' applied:
-%   | :- solve(X, cube(w,w,g,w,w,r,w,o,g,y,y,y,y,y,y,y,y,y,g,g,o,g,g,g,g,g,r,w,b,b,w,b,b,w,b,b,b,w,r,r,r,r,r,r,r,o,o,o,o,o,o,b,b,o), C), solved(C).
+%   For example, the following is how you can solve a solved cube with F,R,U applied:
+%   | :- solve(X, cube(g,w,w,g,w,w,r,r,r,b,b,o,y,y,o,y,y,o,g,g,r,g,g,r,y,y,b,o,b,b,o,b,b,g,b,b,w,w,w,r,r,y,r,r,y,o,o,w,o,o,w,y,g,g), C), solved(C).
 %
 % %
 
