@@ -232,3 +232,40 @@ rotateside(
         Y1, O2, O3, Y4, O5, O6, Y7, O8, O9      % back side
         )
 ).
+
+% Rotate the Right side clockwise by 90 degrees
+%   From:                        To:
+%
+%            O1 O2 O3                       O1 O2 W3
+%            O4 O5 O6                       O4 O5 W6
+%            O7 O8 O9                       O7 O8 W9
+%   G1 G2 G3 W1 W2 W3 B1 B2 B3     G1 G2 G3 W1 W2 R3 B7 B4 B1
+%   G4 G5 G6 W4 W5 W6 B4 B5 B6     G4 G5 G6 W4 W5 R6 B8 B5 B2
+%   G7 G8 G9 W7 W8 W9 B7 B8 B9     G7 G8 G9 W7 W8 R9 B9 B6 B3
+%            R1 R2 R3                       R1 R2 Y3
+%            R4 R5 R6                       R4 R5 Y6
+%            R7 R8 R9                       R7 R8 Y9
+%            Y1 Y2 Y3                       Y1 Y2 O3
+%            Y4 Y5 Y6                       Y4 Y5 O6
+%            Y7 Y8 Y9                       Y7 Y8 O9
+rotateside(
+    right,
+    % translate cube map from:
+    cube(
+        W1, W2, W3, W4, W5, W6, W7, W8, W9,     % top side
+        Y1, Y2, Y3, Y4, Y5, Y6, Y7, Y8, Y9,     % bottom side
+        G1, G2, G3, G4, G5, G6, G7, G8, G9,     % left side
+        B1, B2, B3, B4, B5, B6, B7, B8, B9,     % right side
+        R1, R2, R3, R4, R5, R6, R7, R8, R9,     % front side
+        O1, O2, O3, O4, O5, O6, O7, O8, O9      % back side
+        ),
+    % to new cube map with Right side rotated clockwise by 90 degrees:
+    cube(
+        W1, W2, R3, W4, W5, R6, W7, W8, R9,     % top side
+        Y1, Y2, O3, Y4, Y5, O6, Y7, Y8, O9,     % bottom side
+        G1, G2, G3, G4, G5, G6, G7, G8, G9,     % left side
+        B7, B4, B1, B8, B5, B2, B9, B6, B3,     % right side
+        R1, R2, Y3, R4, R5, Y6, R7, R8, Y9,     % front side
+        O1, O2, W3, O4, O5, W6, O7, O8, W9      % back side
+        )
+).
