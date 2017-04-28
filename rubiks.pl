@@ -21,9 +21,9 @@
 % Define the base case, where all colors are in correct position and the cube is solved
 solved(cube(W,W,W,W,W,W,W,W,W,Y,Y,Y,Y,Y,Y,Y,Y,Y,G,G,G,G,G,G,G,G,G,B,B,B,B,B,B,B,B,B,R,R,R,R,R,R,R,R,R,O,O,O,O,O,O,O,O,O)).
 
-% Solve the Rubik's Cube by inputting your cube map as variable C
-solve([], C, C).
-solve([NextRotation | PrevRotation], C, CurrentState) :- solve(PrevRotation, D, CurrentState), rotateside(NextRotation, C, D).
+% Solve the Rubik's Cube by inputting your cube map as variable Cube
+solve([], Cube, Cube).
+solve([NextRotation | Rotation], Cube, NewState) :- solve(Rotation, CurrentState, NewState), rotateside(NextRotation, Cube, CurrentState).
 
 
 % Side Rotation translation maps-
